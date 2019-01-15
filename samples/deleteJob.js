@@ -16,7 +16,7 @@
 /**
 * Delete a job via the Cloud Scheduler API
 */
-async function deleteSchedulerJob(projectId, locationId, jobId) {
+async function deleteJob(projectId, locationId, jobId) {
   // [START cloud_scheduler_delete_job]
   const scheduler = require("@google-cloud/scheduler");
 
@@ -38,4 +38,7 @@ async function deleteSchedulerJob(projectId, locationId, jobId) {
   return job;
 }
 
-module.exports = deleteSchedulerJob;
+const args = process.argv.slice(2);
+deleteJob(...args).catch(console.error);
+
+module.exports = deleteJob;

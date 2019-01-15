@@ -14,24 +14,30 @@
 
 'use strict';
 
+const path = require('path');
 const {assert} = require('chai');
+const execa = require('execa');
 
-const createJob = require('../createJob');
-const deleteJob = require('../deleteJob');
+// const createJob = require('../createJob');
+// const deleteJob = require('../deleteJob');
 
 const PROJECT_ID = process.env.GCLOUD_PROJECT;
 const LOCATION_ID = process.env.LOCATION_ID || 'us-central1';
 const SERVICE_ID = 'my-service';
+const cwd = path.join(__dirname, '..');
+const exec = cmd => execa.shell(cmd, {cwd});
 
 describe('Cloud Scheduler Sample Tests', () => {
-
   it('should create and delete a scheduler job', async () => {
-    const createOutput = await createJob(PROJECT_ID, LOCATION_ID, SERVICE_ID);
-    assert.match(createOutput, /projects\//);
+    var {stdout} = await exec(
+      `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`
+    )
+    assert.match(stdout, /Created job/);
 
-    const jobName = createOutput.split('/').pop();
-    const deleteOutput = await deleteJob(PROJECT_ID, LOCATION_ID, jobName);
-    assert.match(deleteOutput, /projects\//);
+    const jobName = stdout.split('/').pop();
+    var {stdout} = await exec(
+      `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
+    )
+    assert.match(stdout, /Job deleted/);
   });
-
 });

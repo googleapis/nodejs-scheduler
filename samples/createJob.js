@@ -57,4 +57,7 @@ async function createJob(projectId, locationId, serviceId) {
   return response.name;
 }
 
+const args = process.argv.slice(2);
+createJob(...args).catch(console.error);
+
 module.exports = createJob;
