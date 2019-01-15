@@ -2,10 +2,17 @@
   "name": "nodejs-scheduler-samples",
   "private": true,
   "main": "quickstart.js",
-  "files": ["*.js"],
+  "files": [
+    "*.js"
+  ],
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "mocha system-test --timeout 10000"
+  },
   "dependencies": {
-    "@google-cloud/scheduler": "^0.1.2"
+    "@google-cloud/scheduler": "^0.1.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
