@@ -14,7 +14,7 @@
 
 'use strict';
 
-const assert = require('assert');
+const {assert} = require('chai');
 
 const createJob = require('../createJob');
 const deleteJob = require('../deleteJob');
@@ -26,12 +26,12 @@ const SERVICE_ID = 'my-service';
 describe('Cloud Scheduler Sample Tests', () => {
 
   it('should create and delete a scheduler job', async () => {
-    const create_output = await createJob(PROJECT_ID, LOCATION_ID, SERVICE_ID);
-    assert.ok(create_output.includes('projects/'));
+    const createOutput = await createJob(PROJECT_ID, LOCATION_ID, SERVICE_ID);
+    assert.match(createOutput, /projects\//);
 
-    const jobName = create_output.split('/').pop();
-    const delete_output = await deleteJob(PROJECT_ID, LOCATION_ID, jobName);
-    assert.ok(delete_output.includes('projects/'));
+    const jobName = createOutput.split('/').pop();
+    const deleteOutput = await deleteJob(PROJECT_ID, LOCATION_ID, jobName);
+    assert.match(deleteOutput, /projects\//);
   });
-  
+
 });

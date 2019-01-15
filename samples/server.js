@@ -15,7 +15,6 @@
 'use strict';
 
 // [START cloud_scheduler_app]
-const bodyParser = require('body-parser');
 const express = require('express');
 
 const app = express();
@@ -33,11 +32,6 @@ app.post('/log_payload', (req, res) => {
 app.get('/', (req, res) => {
   res.status(200).send('Hello, World!').end();
 });
-
-app.get('*', (req, res) => {
-  res.send('OK').end();
-});
-
 
 // Start the server
 const PORT = process.env.PORT || 8080;
