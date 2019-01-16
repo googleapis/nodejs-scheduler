@@ -17,14 +17,15 @@
 const path = require('path');
 const {assert} = require('chai');
 const execa = require('execa');
-
-// const createJob = require('../createJob');
-// const deleteJob = require('../deleteJob');
+const supertest = require('supertest');
+const app = require('../app.js');
+const request = supertest(app);
 
 const PROJECT_ID = process.env.GCLOUD_PROJECT;
 const LOCATION_ID = process.env.LOCATION_ID || 'us-central1';
 const SERVICE_ID = 'my-service';
-const cwd = path.join(__dirname, '..');
+
+const cwd = path.join(__dirname, '../');
 const exec = cmd => execa.shell(cmd, {cwd});
 
 describe('Cloud Scheduler Sample Tests', () => {
@@ -39,5 +40,14 @@ describe('Cloud Scheduler Sample Tests', () => {
       `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
     )
     assert.match(stdout, /Job deleted/);
+  });
+
+  it('should log the payload', (done) => {
+    const body = Buffer.from("test")
+    request
+      .post(`/log_payload`)
+      .type('raw')
+      .send(body)
+      .expect(200,/Printed job/, done)
   });
 });

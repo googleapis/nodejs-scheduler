@@ -39,7 +39,7 @@ async function createJob(projectId, locationId, serviceId) {
       },
       relativeUri: "/log_payload",
       httpMethod: "POST",
-      body: Buffer.from("hello world")//.toString("base64"),
+      body: Buffer.from("Hello World")//.toString("base64"),
     },
     schedule: "* * * * *",
     timeZone: "America/Los_Angeles"
@@ -54,10 +54,7 @@ async function createJob(projectId, locationId, serviceId) {
   const [response] = await client.createJob(request);
   console.log(`Created job: ${response.name}`)
   // [END cloud_scheduler_create_job]
-  return response.name;
 }
 
 const args = process.argv.slice(2);
 createJob(...args).catch(console.error);
-
-module.exports = createJob;

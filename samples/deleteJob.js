@@ -35,10 +35,7 @@ async function deleteJob(projectId, locationId, jobId) {
   await client.deleteJob({name: job});
   console.log("Job deleted.");
   // [END cloud_scheduler_delete_job]
-  return job;
 }
 
 const args = process.argv.slice(2);
 deleteJob(...args).catch(console.error);
-
-module.exports = deleteJob;

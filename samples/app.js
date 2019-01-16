@@ -16,6 +16,7 @@
 
 // [START cloud_scheduler_app]
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const app = express();
 app.use(bodyParser.raw());
@@ -39,3 +40,5 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
+
+module.exports = app
