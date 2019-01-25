@@ -29,25 +29,31 @@ const cwd = path.join(__dirname, '../');
 const exec = cmd => execa.shell(cmd, {cwd});
 
 describe('Cloud Scheduler Sample Tests', () => {
-  it('should create and delete a scheduler job', async () => {
-    var {stdout} = await exec(
-      `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`
-    )
-    assert.match(stdout, /Created job/);
+  let jobName;
 
-    const jobName = stdout.split('/').pop();
-    var {stdout} = await exec(
-      `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
-    )
-    assert.match(stdout, /Job deleted/);
+  it('should create and delete a scheduler job', async () => {
+    const {stdout} = await exec(
+      `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`
+    );
+    assert.match(stdout, /Created job/);
+    jobName = stdout.split('/').pop();
   });
 
-  it('should log the payload', (done) => {
-    const body = Buffer.from("test")
+  it('should delete a scheduler job', async () => {
+    const {stdout} = await exec(
+      `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
+    );
+    assert.match(stdout, /Job deleted/);
+  });
+});
+
+describe('Server should respond to /log_payload', () => {
+  it('should log the payload', done => {
+    const body = Buffer.from('test');
     request
       .post(`/log_payload`)
       .type('raw')
       .send(body)
-      .expect(200,/Printed job/, done)
+      .expect(200, /Printed job/, done);
   });
 });

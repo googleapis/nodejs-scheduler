@@ -16,7 +16,7 @@
 
 // [START cloud_scheduler_app]
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.raw());
@@ -31,7 +31,10 @@ app.post('/log_payload', (req, res) => {
 // [END cloud_scheduler_app]
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, World!').end();
+  res
+    .status(200)
+    .send('Hello, World!')
+    .end();
 });
 
 // Start the server
@@ -41,4 +44,4 @@ app.listen(PORT, () => {
   console.log('Press Ctrl+C to quit.');
 });
 
-module.exports = app
+module.exports = app;
