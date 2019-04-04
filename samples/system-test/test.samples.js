@@ -16,7 +16,7 @@
 
 const path = require('path');
 const {assert} = require('chai');
-const execa = require('execa');
+const {execSync} = require('child_process');
 const supertest = require('supertest');
 const app = require('../app.js');
 const request = supertest(app);
@@ -32,7 +32,7 @@ describe('Cloud Scheduler Sample Tests', () => {
   let jobName;
 
   it('should create and delete a scheduler job', async () => {
-    const {stdout} = await exec(
+    const stdout = execSync(
       `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`
     );
     assert.match(stdout, /Created job/);
@@ -40,7 +40,7 @@ describe('Cloud Scheduler Sample Tests', () => {
   });
 
   it('should delete a scheduler job', async () => {
-    const {stdout} = await exec(
+    const stdout = execSync(
       `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
     );
     assert.match(stdout, /Job deleted/);
