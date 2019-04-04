@@ -35,7 +35,6 @@ describe('Cloud Scheduler Sample Tests', () => {
     );
     assert.match(stdout, /Created job/);
     jobName = stdout
-      .toString()
       .split('/')
       .pop();
   });
