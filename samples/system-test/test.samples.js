@@ -14,7 +14,6 @@
 
 'use strict';
 
-const path = require('path');
 const {assert} = require('chai');
 const {execSync} = require('child_process');
 const supertest = require('supertest');
