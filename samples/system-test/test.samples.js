@@ -25,9 +25,6 @@ const PROJECT_ID = process.env.GCLOUD_PROJECT;
 const LOCATION_ID = process.env.LOCATION_ID || 'us-central1';
 const SERVICE_ID = 'my-service';
 
-const cwd = path.join(__dirname, '../');
-const exec = cmd => execa.shell(cmd, {cwd});
-
 describe('Cloud Scheduler Sample Tests', () => {
   let jobName;
 
