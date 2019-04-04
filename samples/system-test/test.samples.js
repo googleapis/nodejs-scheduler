@@ -29,10 +29,10 @@ describe('Cloud Scheduler Sample Tests', () => {
 
   it('should create and delete a scheduler job', async () => {
     const stdout = execSync(
-      `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`
+      `node createJob.js ${PROJECT_ID} ${LOCATION_ID} ${SERVICE_ID}`,
     );
     assert.match(stdout, /Created job/);
-    jobName = stdout.split('/').pop();
+    jobName = stdout.toString().split('/').pop();
   });
 
   it('should delete a scheduler job', async () => {
