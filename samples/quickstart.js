@@ -20,7 +20,7 @@
 //   description: POST "Hello World" to a URL every minute.
 //   usage: node quickstart.js [project-id] [location-id] [url]
 
-async function run(projectId, locationId, url) {
+async function main(projectId, locationId, url) {
   // [START scheduler_quickstart]
   // const projectId = "PROJECT_ID"
   // const locationId = "LOCATION_ID" // see: https://cloud.google.com/about/locations/
@@ -57,4 +57,7 @@ async function run(projectId, locationId, url) {
 }
 
 const args = process.argv.slice(2);
-run(...args).catch(console.error);
+main(...args).catch(err => {
+  console.error(err.message);
+  process.exitCode = 1;
+});
