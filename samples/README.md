@@ -79,6 +79,8 @@ __Usage:__
 
 ### Quickstart
 
+POST "Hello World" to a URL every minute.
+
 View the [source code](https://github.com/googleapis/nodejs-scheduler/blob/master/samples/quickstart.js).
 
 [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-scheduler&page=editor&open_in_editor=samples/quickstart.js,samples/README.md)
@@ -86,7 +88,7 @@ View the [source code](https://github.com/googleapis/nodejs-scheduler/blob/maste
 __Usage:__
 
 
-`node quickstart.js`
+`node quickstart.js [project-id] [location-id] [url]`
 
 
 
