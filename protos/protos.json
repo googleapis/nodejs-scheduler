@@ -10,11 +10,169 @@
                   "options": {
                     "go_package": "google.golang.org/genproto/googleapis/cloud/scheduler/v1;scheduler",
                     "java_multiple_files": true,
-                    "java_outer_classname": "SchedulerProto",
+                    "java_outer_classname": "TargetProto",
                     "java_package": "com.google.cloud.scheduler.v1",
                     "objc_class_prefix": "SCHEDULER"
                   },
                   "nested": {
+                    "CloudScheduler": {
+                      "methods": {
+                        "ListJobs": {
+                          "requestType": "ListJobsRequest",
+                          "responseType": "ListJobsResponse",
+                          "options": {
+                            "(google.api.http).get": "/v1/{parent=projects/*/locations/*}/jobs"
+                          }
+                        },
+                        "GetJob": {
+                          "requestType": "GetJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).get": "/v1/{name=projects/*/locations/*/jobs/*}"
+                          }
+                        },
+                        "CreateJob": {
+                          "requestType": "CreateJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).post": "/v1/{parent=projects/*/locations/*}/jobs",
+                            "(google.api.http).body": "job"
+                          }
+                        },
+                        "UpdateJob": {
+                          "requestType": "UpdateJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).patch": "/v1/{job.name=projects/*/locations/*/jobs/*}",
+                            "(google.api.http).body": "job"
+                          }
+                        },
+                        "DeleteJob": {
+                          "requestType": "DeleteJobRequest",
+                          "responseType": "google.protobuf.Empty",
+                          "options": {
+                            "(google.api.http).delete": "/v1/{name=projects/*/locations/*/jobs/*}"
+                          }
+                        },
+                        "PauseJob": {
+                          "requestType": "PauseJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:pause",
+                            "(google.api.http).body": "*"
+                          }
+                        },
+                        "ResumeJob": {
+                          "requestType": "ResumeJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:resume",
+                            "(google.api.http).body": "*"
+                          }
+                        },
+                        "RunJob": {
+                          "requestType": "RunJobRequest",
+                          "responseType": "Job",
+                          "options": {
+                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:run",
+                            "(google.api.http).body": "*"
+                          }
+                        }
+                      }
+                    },
+                    "ListJobsRequest": {
+                      "fields": {
+                        "parent": {
+                          "type": "string",
+                          "id": 1
+                        },
+                        "pageSize": {
+                          "type": "int32",
+                          "id": 5
+                        },
+                        "pageToken": {
+                          "type": "string",
+                          "id": 6
+                        }
+                      }
+                    },
+                    "ListJobsResponse": {
+                      "fields": {
+                        "jobs": {
+                          "rule": "repeated",
+                          "type": "Job",
+                          "id": 1
+                        },
+                        "nextPageToken": {
+                          "type": "string",
+                          "id": 2
+                        }
+                      }
+                    },
+                    "GetJobRequest": {
+                      "fields": {
+                        "name": {
+                          "type": "string",
+                          "id": 1
+                        }
+                      }
+                    },
+                    "CreateJobRequest": {
+                      "fields": {
+                        "parent": {
+                          "type": "string",
+                          "id": 1
+                        },
+                        "job": {
+                          "type": "Job",
+                          "id": 2
+                        }
+                      }
+                    },
+                    "UpdateJobRequest": {
+                      "fields": {
+                        "job": {
+                          "type": "Job",
+                          "id": 1
+                        },
+                        "updateMask": {
+                          "type": "google.protobuf.FieldMask",
+                          "id": 2
+                        }
+                      }
+                    },
+                    "DeleteJobRequest": {
+                      "fields": {
+                        "name": {
+                          "type": "string",
+                          "id": 1
+                        }
+                      }
+                    },
+                    "PauseJobRequest": {
+                      "fields": {
+                        "name": {
+                          "type": "string",
+                          "id": 1
+                        }
+                      }
+                    },
+                    "ResumeJobRequest": {
+                      "fields": {
+                        "name": {
+                          "type": "string",
+                          "id": 1
+                        }
+                      }
+                    },
+                    "RunJobRequest": {
+                      "fields": {
+                        "name": {
+                          "type": "string",
+                          "id": 1
+                        }
+                      }
+                    },
                     "Job": {
                       "oneofs": {
                         "target": {
@@ -251,164 +409,6 @@
                         "audience": {
                           "type": "string",
                           "id": 2
-                        }
-                      }
-                    },
-                    "CloudScheduler": {
-                      "methods": {
-                        "ListJobs": {
-                          "requestType": "ListJobsRequest",
-                          "responseType": "ListJobsResponse",
-                          "options": {
-                            "(google.api.http).get": "/v1/{parent=projects/*/locations/*}/jobs"
-                          }
-                        },
-                        "GetJob": {
-                          "requestType": "GetJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).get": "/v1/{name=projects/*/locations/*/jobs/*}"
-                          }
-                        },
-                        "CreateJob": {
-                          "requestType": "CreateJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).post": "/v1/{parent=projects/*/locations/*}/jobs",
-                            "(google.api.http).body": "job"
-                          }
-                        },
-                        "UpdateJob": {
-                          "requestType": "UpdateJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).patch": "/v1/{job.name=projects/*/locations/*/jobs/*}",
-                            "(google.api.http).body": "job"
-                          }
-                        },
-                        "DeleteJob": {
-                          "requestType": "DeleteJobRequest",
-                          "responseType": "google.protobuf.Empty",
-                          "options": {
-                            "(google.api.http).delete": "/v1/{name=projects/*/locations/*/jobs/*}"
-                          }
-                        },
-                        "PauseJob": {
-                          "requestType": "PauseJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:pause",
-                            "(google.api.http).body": "*"
-                          }
-                        },
-                        "ResumeJob": {
-                          "requestType": "ResumeJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:resume",
-                            "(google.api.http).body": "*"
-                          }
-                        },
-                        "RunJob": {
-                          "requestType": "RunJobRequest",
-                          "responseType": "Job",
-                          "options": {
-                            "(google.api.http).post": "/v1/{name=projects/*/locations/*/jobs/*}:run",
-                            "(google.api.http).body": "*"
-                          }
-                        }
-                      }
-                    },
-                    "ListJobsRequest": {
-                      "fields": {
-                        "parent": {
-                          "type": "string",
-                          "id": 1
-                        },
-                        "pageSize": {
-                          "type": "int32",
-                          "id": 5
-                        },
-                        "pageToken": {
-                          "type": "string",
-                          "id": 6
-                        }
-                      }
-                    },
-                    "ListJobsResponse": {
-                      "fields": {
-                        "jobs": {
-                          "rule": "repeated",
-                          "type": "Job",
-                          "id": 1
-                        },
-                        "nextPageToken": {
-                          "type": "string",
-                          "id": 2
-                        }
-                      }
-                    },
-                    "GetJobRequest": {
-                      "fields": {
-                        "name": {
-                          "type": "string",
-                          "id": 1
-                        }
-                      }
-                    },
-                    "CreateJobRequest": {
-                      "fields": {
-                        "parent": {
-                          "type": "string",
-                          "id": 1
-                        },
-                        "job": {
-                          "type": "Job",
-                          "id": 2
-                        }
-                      }
-                    },
-                    "UpdateJobRequest": {
-                      "fields": {
-                        "job": {
-                          "type": "Job",
-                          "id": 1
-                        },
-                        "updateMask": {
-                          "type": "google.protobuf.FieldMask",
-                          "id": 2
-                        }
-                      }
-                    },
-                    "DeleteJobRequest": {
-                      "fields": {
-                        "name": {
-                          "type": "string",
-                          "id": 1
-                        }
-                      }
-                    },
-                    "PauseJobRequest": {
-                      "fields": {
-                        "name": {
-                          "type": "string",
-                          "id": 1
-                        }
-                      }
-                    },
-                    "ResumeJobRequest": {
-                      "fields": {
-                        "name": {
-                          "type": "string",
-                          "id": 1
-                        }
-                      }
-                    },
-                    "RunJobRequest": {
-                      "fields": {
-                        "name": {
-                          "type": "string",
-                          "id": 1
                         }
                       }
                     }
