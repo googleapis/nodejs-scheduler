@@ -24,14 +24,12 @@ error.code = FAKE_STATUS_CODE;
 
 describe('CloudSchedulerClient', () => {
   it('has servicePath', () => {
-    const servicePath =
-      schedulerModule.v1beta1.CloudSchedulerClient.servicePath;
+    const servicePath = schedulerModule.v1beta1.CloudSchedulerClient.servicePath;
     assert(servicePath);
   });
 
   it('has apiEndpoint', () => {
-    const apiEndpoint =
-      schedulerModule.v1beta1.CloudSchedulerClient.apiEndpoint;
+    const apiEndpoint = schedulerModule.v1beta1.CloudSchedulerClient.apiEndpoint;
     assert(apiEndpoint);
   });
 
@@ -47,9 +45,7 @@ describe('CloudSchedulerClient', () => {
   });
 
   it('should create a client with gRPC fallback', () => {
-    const client = new schedulerModule.v1beta1.CloudSchedulerClient({
-      fallback: true,
-    });
+    const client = new schedulerModule.v1beta1.CloudSchedulerClient({fallback: true});
     assert(client);
   });
 
@@ -167,7 +163,11 @@ describe('CloudSchedulerClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.getJob = mockSimpleGrpcMethod(request, null, error);
+      client._innerApiCalls.getJob = mockSimpleGrpcMethod(
+        request,
+        null,
+        error
+      );
 
       client.getJob(request, (err, response) => {
         assert(err instanceof Error);
@@ -546,7 +546,11 @@ describe('CloudSchedulerClient', () => {
       };
 
       // Mock Grpc layer
-      client._innerApiCalls.runJob = mockSimpleGrpcMethod(request, null, error);
+      client._innerApiCalls.runJob = mockSimpleGrpcMethod(
+        request,
+        null,
+        error
+      );
 
       client.runJob(request, (err, response) => {
         assert(err instanceof Error);
@@ -556,6 +560,7 @@ describe('CloudSchedulerClient', () => {
       });
     });
   });
+
 });
 
 function mockSimpleGrpcMethod(expectedRequest, response, error) {
