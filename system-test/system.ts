@@ -18,16 +18,11 @@ const assert = require('assert');
 const {CloudSchedulerClient} = require('../src');
 
 describe(__filename, () => {
-  let client;
-  let projectId;
-  const location = 'us-central1';
-
-  before(async () => {
-    client = new CloudSchedulerClient();
-    projectId = await client.getProjectId();
-  });
 
   it('should list available jobs', async () => {
+    const location = 'us-central1';
+    const client = new CloudSchedulerClient;
+    const projectId = await client.getProjectId();
     const parent = client.locationPath(projectId, location);
     const [result] = await client.listJobs({parent});
     assert.ok(result);
