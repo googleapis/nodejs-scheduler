@@ -12,16 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-'use strict';
-
 const assert = require('assert');
 const {CloudSchedulerClient} = require('../src');
 
-describe(__filename, () => {
-
+describe('typescript system test', () => {
   it('should list available jobs', async () => {
     const location = 'us-central1';
-    const client = new CloudSchedulerClient;
+    const client = new CloudSchedulerClient();
     const projectId = await client.getProjectId();
     const parent = client.locationPath(projectId, location);
     const [result] = await client.listJobs({parent});
