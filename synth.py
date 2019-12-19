@@ -27,7 +27,8 @@ for version in versions:
             'scheduler', version,
             generator_args={
                     "grpc-service-config": f"google/cloud/scheduler/{version}/cloudscheduler_grpc_service_config.json",
-                    "package-name": f"@google-cloud/scheduler"
+                    "package-name": f"@google-cloud/scheduler",
+                    "main-service": f"scheduler"
                     },
                 proto_path=f'/google/cloud/scheduler/{version}',
                 extra_proto_files=['google/cloud/common_resources.proto'],
