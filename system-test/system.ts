@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const assert = require('assert');
-const {describe, it} = require('mocha');
-const {CloudSchedulerClient} = require('../src');
+import * as assert from 'assert';
+import {describe, it} from 'mocha';
+import {CloudSchedulerClient} from '../src';
 
 describe('typescript system test', () => {
   it('should list available jobs', async () => {
