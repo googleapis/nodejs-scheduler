@@ -13,6 +13,7 @@
 // limitations under the License.
 
 const assert = require('assert');
+const {describe, it} = require('mocha');
 const {CloudSchedulerClient} = require('../src');
 
 describe('typescript system test', () => {
