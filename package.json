@@ -36,7 +36,8 @@
     "compile": "tsc -p . && cp -r protos build/",
     "compile-protos": "compileProtos src",
     "predocs-test": "npm run docs",
-    "prepare": "npm run compile"
+    "prepare": "npm run compile",
+    "pretest": "npm run compile"
   },
   "dependencies": {
     "google-gax": "^1.9.0",
@@ -48,7 +49,7 @@
     "c8": "^6.0.0",
     "eslint": "^6.0.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "gts": "^1.0.0",
     "intelli-espower-loader": "^1.0.1",
