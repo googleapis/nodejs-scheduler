@@ -25,13 +25,12 @@
   ],
   "scripts": {
     "test": "c8 mocha build/test",
-
     "docs": "jsdoc -c .jsdoc.js",
     "lint": "gts fix && eslint --fix samples/*.js",
     "fix": "gts fix",
     "samples-test": "cd samples/ && npm link ../ && npm install && npm test && cd ../",
     "system-test": "mocha build/system-test",
-        "docs-test": "linkinator docs",
+    "docs-test": "linkinator docs",
     "clean": "gts clean",
     "compile": "tsc -p . && cp -r protos build/",
     "compile-protos": "compileProtos src",
