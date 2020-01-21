@@ -34,6 +34,12 @@ for version in versions:
                 extra_proto_files=['google/cloud/common_resources.proto'],
             )
     s.copy(library, excludes=['src/index.ts', 'README.md', 'package.json'])
+    sample_generator = gcp.GAPICGenerator()
+    samples = sample_generator.node_library('scheduler', version,
+            include_samples=True,
+            config_path=f"artman_cloudscheduler_{version}.yaml",
+            artman_output_name=f'cloudscheduler-{version}')
+    s.copy(samples / "samples")
 
 # Copy common templates
 common_templates = gcp.CommonTemplates()

@@ -1,12 +1,18 @@
 {
-  "updateTime": "2020-01-09T12:24:22.258142Z",
+  "updateTime": "2020-01-21T21:33:46.676005Z",
   "sources": [
     {
-      "git": {
-        "name": "googleapis",
-        "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "6ace586805c08896fef43e28a261337fcf3f022b",
-        "internalRef": "288783603"
+      "generator": {
+        "name": "artman",
+        "version": "0.44.1",
+        "dockerImage": "googleapis/artman@sha256:5599b61e56a372d21b671969ee915fbca0f6c3a0daaeb898d01f8f685f1bbc8b"
+      }
+    },
+    {
+      "generator": {
+        "name": "artman",
+        "version": "0.44.1",
+        "dockerImage": "googleapis/artman@sha256:5599b61e56a372d21b671969ee915fbca0f6c3a0daaeb898d01f8f685f1bbc8b"
       }
     },
     {
@@ -31,10 +37,263 @@
       "client": {
         "source": "googleapis",
         "apiName": "scheduler",
+        "apiVersion": "v1beta1",
+        "language": "nodejs",
+        "generator": "gapic",
+        "config": "google/cloud/scheduler/artman_cloudscheduler_v1beta1.yaml"
+      }
+    },
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "scheduler",
         "apiVersion": "v1",
         "language": "typescript",
         "generator": "gapic-generator-typescript"
       }
+    },
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "scheduler",
+        "apiVersion": "v1",
+        "language": "nodejs",
+        "generator": "gapic",
+        "config": "google/cloud/scheduler/artman_cloudscheduler_v1.yaml"
+      }
+    }
+  ],
+  "newFiles": [
+    {
+      "path": ".eslintignore"
+    },
+    {
+      "path": ".eslintrc.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/support_request.md"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md"
+    },
+    {
+      "path": ".github/release-please.yml"
+    },
+    {
+      "path": ".jsdoc.js"
+    },
+    {
+      "path": ".kokoro/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/continuous/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/docs.sh"
+    },
+    {
+      "path": ".kokoro/lint.sh"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/docs.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/lint.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/samples-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/system-test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node10/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node12/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/node8/test.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/common.cfg"
+    },
+    {
+      "path": ".kokoro/presubmit/windows/test.cfg"
+    },
+    {
+      "path": ".kokoro/publish.sh"
+    },
+    {
+      "path": ".kokoro/release/docs.cfg"
+    },
+    {
+      "path": ".kokoro/release/docs.sh"
+    },
+    {
+      "path": ".kokoro/release/publish.cfg"
+    },
+    {
+      "path": ".kokoro/samples-test.sh"
+    },
+    {
+      "path": ".kokoro/system-test.sh"
+    },
+    {
+      "path": ".kokoro/test.bat"
+    },
+    {
+      "path": ".kokoro/test.sh"
+    },
+    {
+      "path": ".kokoro/trampoline.sh"
+    },
+    {
+      "path": ".nycrc"
+    },
+    {
+      "path": ".prettierignore"
+    },
+    {
+      "path": ".prettierrc"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md"
+    },
+    {
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE"
+    },
+    {
+      "path": "README.md"
+    },
+    {
+      "path": "codecov.yaml"
+    },
+    {
+      "path": "linkinator.config.json"
+    },
+    {
+      "path": "protos/google/cloud/common_resources.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1/cloudscheduler.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1/job.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1/target.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1beta1/cloudscheduler.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1beta1/job.proto"
+    },
+    {
+      "path": "protos/google/cloud/scheduler/v1beta1/target.proto"
+    },
+    {
+      "path": "renovate.json"
+    },
+    {
+      "path": "samples/README.md"
+    },
+    {
+      "path": "samples/v1/cloud_scheduler_create_job.js"
+    },
+    {
+      "path": "src/v1/cloud_scheduler_client.ts"
+    },
+    {
+      "path": "src/v1/cloud_scheduler_client_config.json"
+    },
+    {
+      "path": "src/v1/cloud_scheduler_proto_list.json"
+    },
+    {
+      "path": "src/v1/index.ts"
+    },
+    {
+      "path": "src/v1beta1/cloud_scheduler_client.ts"
+    },
+    {
+      "path": "src/v1beta1/cloud_scheduler_client_config.json"
+    },
+    {
+      "path": "src/v1beta1/cloud_scheduler_proto_list.json"
+    },
+    {
+      "path": "src/v1beta1/index.ts"
+    },
+    {
+      "path": "system-test/fixtures/sample/src/index.js"
+    },
+    {
+      "path": "system-test/fixtures/sample/src/index.ts"
+    },
+    {
+      "path": "system-test/install.ts"
+    },
+    {
+      "path": "test/gapic-cloud_scheduler-v1.ts"
+    },
+    {
+      "path": "test/gapic-cloud_scheduler-v1beta1.ts"
+    },
+    {
+      "path": "tsconfig.json"
+    },
+    {
+      "path": "tslint.json"
+    },
+    {
+      "path": "webpack.config.js"
     }
   ]
 }
