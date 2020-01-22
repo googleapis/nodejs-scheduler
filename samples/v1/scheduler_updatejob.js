@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// DO NOT EDIT! This is a generated sample ("Request",  "getjob")
+// DO NOT EDIT! This is a generated sample ("Request",  "scheduler_updatejob")
 
 // sample-metadata:
 //   title:
-//   usage: node samples/v1/getjob.js
+//   usage: node samples/v1/scheduler_updatejob.js
 
 'use strict';
 
 function main() {
+  // [START scheduler_updatejob]
 
   // Imports the client library
   const {CloudSchedulerClient} = require('@google-cloud/scheduler').v1;
@@ -28,15 +29,23 @@ function main() {
   // Instantiates a client
   const cloudSchedulerClient = new CloudSchedulerClient();
 
-  async function sampleGetJob() {
-    const formattedName = cloudSchedulerClient.jobPath('[PROJECT]', '[LOCATION]', '[JOB]');
+  async function sampleUpdateJob() {
+    const job = {};
+    const updateMask = {};
+
+    // Construct request
+    const request = {
+      job: job,
+      updateMask: updateMask,
+    };
 
     // Run request
-    const [response] = await cloudSchedulerClient.getJob({name: formattedName});
+    const [response] = await cloudSchedulerClient.updateJob(request);
 
     console.log(response);
   }
-  sampleGetJob();
+  sampleUpdateJob();
+  // [END scheduler_updatejob]
 }
 
 main();

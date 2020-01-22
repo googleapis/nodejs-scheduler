@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// DO NOT EDIT! This is a generated sample ("Request",  "deletejob")
+// DO NOT EDIT! This is a generated sample ("Request",  "scheduler_runjob")
 
 // sample-metadata:
 //   title:
-//   usage: node samples/v1/deletejob.js
+//   usage: node samples/v1/scheduler_runjob.js
 
 'use strict';
 
 function main() {
+  // [START scheduler_runjob]
 
   // Imports the client library
   const {CloudSchedulerClient} = require('@google-cloud/scheduler').v1;
@@ -28,15 +29,16 @@ function main() {
   // Instantiates a client
   const cloudSchedulerClient = new CloudSchedulerClient();
 
-  async function sampleDeleteJob() {
+  async function sampleRunJob() {
     const formattedName = cloudSchedulerClient.jobPath('[PROJECT]', '[LOCATION]', '[JOB]');
 
     // Run request
-    const [response] = await cloudSchedulerClient.deleteJob({name: formattedName});
+    const [response] = await cloudSchedulerClient.runJob({name: formattedName});
 
-
+    console.log(response);
   }
-  sampleDeleteJob();
+  sampleRunJob();
+  // [END scheduler_runjob]
 }
 
 main();

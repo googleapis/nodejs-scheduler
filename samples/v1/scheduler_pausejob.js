@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// DO NOT EDIT! This is a generated sample ("Request",  "runjob")
+// DO NOT EDIT! This is a generated sample ("Request",  "scheduler_pausejob")
 
 // sample-metadata:
 //   title:
-//   usage: node samples/v1/runjob.js
+//   usage: node samples/v1/scheduler_pausejob.js
 
 'use strict';
 
 function main() {
+  // [START scheduler_pausejob]
 
   // Imports the client library
   const {CloudSchedulerClient} = require('@google-cloud/scheduler').v1;
@@ -28,15 +29,16 @@ function main() {
   // Instantiates a client
   const cloudSchedulerClient = new CloudSchedulerClient();
 
-  async function sampleRunJob() {
+  async function samplePauseJob() {
     const formattedName = cloudSchedulerClient.jobPath('[PROJECT]', '[LOCATION]', '[JOB]');
 
     // Run request
-    const [response] = await cloudSchedulerClient.runJob({name: formattedName});
+    const [response] = await cloudSchedulerClient.pauseJob({name: formattedName});
 
     console.log(response);
   }
-  sampleRunJob();
+  samplePauseJob();
+  // [END scheduler_pausejob]
 }
 
 main();

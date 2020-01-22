@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// DO NOT EDIT! This is a generated sample ("RequestAsyncPagedAll",  "listjobs")
+// DO NOT EDIT! This is a generated sample ("Request",  "scheduler_createjob")
 
 // sample-metadata:
 //   title:
-//   usage: node samples/v1/listjobs.js
+//   usage: node samples/v1/scheduler_createjob.js
 
 'use strict';
 
 function main() {
+  // [START scheduler_createjob]
 
   // Imports the client library
   const {CloudSchedulerClient} = require('@google-cloud/scheduler').v1;
@@ -28,18 +29,23 @@ function main() {
   // Instantiates a client
   const cloudSchedulerClient = new CloudSchedulerClient();
 
-  async function sampleListJobs() {
+  async function sampleCreateJob() {
     const formattedParent = cloudSchedulerClient.locationPath('[PROJECT]', '[LOCATION]');
+    const job = {};
+
+    // Construct request
+    const request = {
+      parent: formattedParent,
+      job: job,
+    };
 
     // Run request
-    const [response] = await cloudSchedulerClient.listJobs({parent: formattedParent});
+    const [response] = await cloudSchedulerClient.createJob(request);
 
-    // Iterate over paged response (uses auto pagination by default)
-    for (const resource of response) {
-      console.log(resource);
-    }
+    console.log(response);
   }
-  sampleListJobs();
+  sampleCreateJob();
+  // [END scheduler_createjob]
 }
 
 main();

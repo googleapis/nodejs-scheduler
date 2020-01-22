@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-22T17:38:57.204261Z",
+  "updateTime": "2020-01-22T20:50:02.858173Z",
   "sources": [
     {
       "generator": {
@@ -251,31 +251,37 @@
       "path": "samples/v1/cloud_scheduler_list_jobs.js"
     },
     {
-      "path": "samples/v1/createjob.js"
+      "path": "samples/v1/scheduler_createjob.js"
     },
     {
-      "path": "samples/v1/deletejob.js"
+      "path": "samples/v1/scheduler_deletejob.js"
     },
     {
-      "path": "samples/v1/getjob.js"
+      "path": "samples/v1/scheduler_getjob.js"
     },
     {
-      "path": "samples/v1/listjobs.js"
+      "path": "samples/v1/scheduler_listjobs.js"
     },
     {
-      "path": "samples/v1/pausejob.js"
+      "path": "samples/v1/scheduler_pausejob.js"
     },
     {
-      "path": "samples/v1/resumejob.js"
+      "path": "samples/v1/scheduler_resumejob.js"
     },
     {
-      "path": "samples/v1/runjob.js"
+      "path": "samples/v1/scheduler_runjob.js"
+    },
+    {
+      "path": "samples/v1/scheduler_updatejob.js"
+    },
+    {
+      "path": "samples/v1/test/auto.test.yaml"
     },
     {
       "path": "samples/v1/test/cloudscheduler.test.yaml"
     },
     {
-      "path": "samples/v1/updatejob.js"
+      "path": "samples/v1/test/samples.manifest.yaml"
     },
     {
       "path": "src/v1/cloud_scheduler_client.ts"
