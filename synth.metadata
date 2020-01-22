@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-21T21:33:46.676005Z",
+  "updateTime": "2020-01-22T17:38:57.204261Z",
   "sources": [
     {
       "generator": {
@@ -246,6 +246,36 @@
     },
     {
       "path": "samples/v1/cloud_scheduler_create_job.js"
+    },
+    {
+      "path": "samples/v1/cloud_scheduler_list_jobs.js"
+    },
+    {
+      "path": "samples/v1/createjob.js"
+    },
+    {
+      "path": "samples/v1/deletejob.js"
+    },
+    {
+      "path": "samples/v1/getjob.js"
+    },
+    {
+      "path": "samples/v1/listjobs.js"
+    },
+    {
+      "path": "samples/v1/pausejob.js"
+    },
+    {
+      "path": "samples/v1/resumejob.js"
+    },
+    {
+      "path": "samples/v1/runjob.js"
+    },
+    {
+      "path": "samples/v1/test/cloudscheduler.test.yaml"
+    },
+    {
+      "path": "samples/v1/updatejob.js"
     },
     {
       "path": "src/v1/cloud_scheduler_client.ts"

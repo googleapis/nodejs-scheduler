@@ -40,7 +40,7 @@ function main(projectId = 'PROJECT_ID', locationId = 'LOCATION_ID', serviceId = 
     const formattedParent = cloudSchedulerClient.locationPath(projectId, locationId);
     const httpMethod = 'POST';
     const relativeUri = '/log_payload';
-    const body = Buffer.from('Hello World');
+    const body = 'Hello World';
     const appEngineRouting = {
       service: serviceId,
     };

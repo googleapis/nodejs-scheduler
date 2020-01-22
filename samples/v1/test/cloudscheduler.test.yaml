@@ -1,0 +1,18 @@
+type: test/samples
+schema_version: 1
+test:
+  suites:
+  - name: Manage jobs
+    cases:
+
+    - name: cloud_scheduler_list_job
+      spec:
+      - call:
+          sample: cloud_scheduler_list_jobs
+          params:
+            project_id:
+              literal: "tribal-cortex-199921"
+            location_id:
+              literal: "us-central1"
+      - assert_contains:
+        - literal: '3321'
