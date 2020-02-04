@@ -143,12 +143,12 @@ export class CloudSchedulerClient {
     // identifiers to uniquely identify resources within the API.
     // Create useful helper objects for these.
     this._pathTemplates = {
+      jobPathTemplate: new gaxModule.PathTemplate(
+        'projects/{project}/locations/{location}/jobs/{job}'
+      ),
       projectPathTemplate: new gaxModule.PathTemplate('projects/{project}'),
       locationPathTemplate: new gaxModule.PathTemplate(
         'projects/{project}/locations/{location}'
-      ),
-      jobPathTemplate: new gaxModule.PathTemplate(
-        'projects/{project}/locations/{location}/jobs/{job}'
       ),
     };
 
@@ -974,6 +974,55 @@ export class CloudSchedulerClient {
   // --------------------
 
   /**
+   * Return a fully-qualified job resource name string.
+   *
+   * @param {string} project
+   * @param {string} location
+   * @param {string} job
+   * @returns {string} Resource name string.
+   */
+  jobPath(project: string, location: string, job: string) {
+    return this._pathTemplates.jobPathTemplate.render({
+      project,
+      location,
+      job,
+    });
+  }
+
+  /**
+   * Parse the project from Job resource.
+   *
+   * @param {string} jobName
+   *   A fully-qualified path representing Job resource.
+   * @returns {string} A string representing the project.
+   */
+  matchProjectFromJobName(jobName: string) {
+    return this._pathTemplates.jobPathTemplate.match(jobName).project;
+  }
+
+  /**
+   * Parse the location from Job resource.
+   *
+   * @param {string} jobName
+   *   A fully-qualified path representing Job resource.
+   * @returns {string} A string representing the location.
+   */
+  matchLocationFromJobName(jobName: string) {
+    return this._pathTemplates.jobPathTemplate.match(jobName).location;
+  }
+
+  /**
+   * Parse the job from Job resource.
+   *
+   * @param {string} jobName
+   *   A fully-qualified path representing Job resource.
+   * @returns {string} A string representing the job.
+   */
+  matchJobFromJobName(jobName: string) {
+    return this._pathTemplates.jobPathTemplate.match(jobName).job;
+  }
+
+  /**
    * Return a fully-qualified project resource name string.
    *
    * @param {string} project
@@ -1031,55 +1080,6 @@ export class CloudSchedulerClient {
   matchLocationFromLocationName(locationName: string) {
     return this._pathTemplates.locationPathTemplate.match(locationName)
       .location;
-  }
-
-  /**
-   * Return a fully-qualified job resource name string.
-   *
-   * @param {string} project
-   * @param {string} location
-   * @param {string} job
-   * @returns {string} Resource name string.
-   */
-  jobPath(project: string, location: string, job: string) {
-    return this._pathTemplates.jobPathTemplate.render({
-      project,
-      location,
-      job,
-    });
-  }
-
-  /**
-   * Parse the project from Job resource.
-   *
-   * @param {string} jobName
-   *   A fully-qualified path representing Job resource.
-   * @returns {string} A string representing the project.
-   */
-  matchProjectFromJobName(jobName: string) {
-    return this._pathTemplates.jobPathTemplate.match(jobName).project;
-  }
-
-  /**
-   * Parse the location from Job resource.
-   *
-   * @param {string} jobName
-   *   A fully-qualified path representing Job resource.
-   * @returns {string} A string representing the location.
-   */
-  matchLocationFromJobName(jobName: string) {
-    return this._pathTemplates.jobPathTemplate.match(jobName).location;
-  }
-
-  /**
-   * Parse the job from Job resource.
-   *
-   * @param {string} jobName
-   *   A fully-qualified path representing Job resource.
-   * @returns {string} A string representing the job.
-   */
-  matchJobFromJobName(jobName: string) {
-    return this._pathTemplates.jobPathTemplate.match(jobName).job;
   }
 
   /**
