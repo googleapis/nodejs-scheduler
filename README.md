@@ -54,37 +54,37 @@ npm install @google-cloud/scheduler
 ### Using the client library
 
 ```javascript
-  // const projectId = "PROJECT_ID"
-  // const locationId = "LOCATION_ID" // see: https://cloud.google.com/about/locations/
-  // const url = "https://postb.in/..." // where should we say hello?
+// const projectId = "PROJECT_ID"
+// const locationId = "LOCATION_ID" // see: https://cloud.google.com/about/locations/
+// const url = "https://postb.in/..." // where should we say hello?
 
-  const scheduler = require('@google-cloud/scheduler');
+const scheduler = require('@google-cloud/scheduler');
 
-  // Create a client.
-  const client = new scheduler.CloudSchedulerClient();
+// Create a client.
+const client = new scheduler.CloudSchedulerClient();
 
-  // Construct the fully qualified location path.
-  const parent = client.locationPath(projectId, locationId);
+// Construct the fully qualified location path.
+const parent = client.locationPath(projectId, locationId);
 
-  // Construct the request body.
-  const job = {
-    httpTarget: {
-      uri: url,
-      httpMethod: 'POST',
-      body: Buffer.from('Hello World'),
-    },
-    schedule: '* * * * *',
-    timeZone: 'America/Los_Angeles',
-  };
+// Construct the request body.
+const job = {
+  httpTarget: {
+    uri: url,
+    httpMethod: 'POST',
+    body: Buffer.from('Hello World'),
+  },
+  schedule: '* * * * *',
+  timeZone: 'America/Los_Angeles',
+};
 
-  const request = {
-    parent: parent,
-    job: job,
-  };
+const request = {
+  parent: parent,
+  job: job,
+};
 
-  // Use the client to send the job creation request.
-  const [response] = await client.createJob(request);
-  console.log(`Created job: ${response.name}`);
+// Use the client to send the job creation request.
+const [response] = await client.createJob(request);
+console.log(`Created job: ${response.name}`);
 
 ```
 
@@ -130,11 +130,13 @@ More Information: [Google Cloud Platform Launch Stages][launch_stages]
 
 Contributions welcome! See the [Contributing Guide](https://github.com/googleapis/nodejs-scheduler/blob/master/CONTRIBUTING.md).
 
-Please note that this `README.md`, the `samples/README.md`,
+Please note that this [README.md](README.md), the [samples/README.md](samples/README.md),
 and a variety of configuration files in this repository (including `.nycrc` and `tsconfig.json`)
-are generated from a central template. To edit one of these files, make an edit
-to its template in this
-[directory](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
+are generated from a central template.
+
+If you would like to make edits to one of those files
+(or if you aren't certain if the file you're changing is one, check in the template repository before making changes),
+look for the file in the [template](https://github.com/googleapis/synthtool/tree/master/synthtool/gcp/templates/node_library).
 
 ## License
 
