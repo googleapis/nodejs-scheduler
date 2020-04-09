@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-03T12:05:30.313982Z",
+  "updateTime": "2020-04-09T13:16:25.795027Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/nodejs-scheduler.git",
+        "sha": "6f7433805445a7e5467bb14feef481810397a267"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
