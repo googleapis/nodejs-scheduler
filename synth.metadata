@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-scheduler.git",
-        "sha": "97970ec48710df0c6511eb2a95fa7b60001e25d5"
+        "sha": "d7fed7b81bdeef1e848a61f83ad23c1593c53615"
       }
     },
     {
