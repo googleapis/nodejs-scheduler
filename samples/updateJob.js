@@ -18,7 +18,6 @@
 //   usage: node updateJob.js [project-id] [location-id] [job-id]
 
 async function updateJob(projectId, locationId, jobId) {
-
   const scheduler = require('@google-cloud/scheduler');
 
   // Create a client.
@@ -36,17 +35,16 @@ async function updateJob(projectId, locationId, jobId) {
   const request = {
     job: {
       name: job,
-      description: "Hello World example."
+      description: 'Hello World example.'
     },
     updateMask: {
-      paths: ["description"]
-    }
+      paths: ['description']
+    },
   };
 
   // Use the client to send the job update request.
   const [response] = await client.updateJob(request);
   console.log(`Updated job: ${response.name}`);
-
 }
 
 const args = process.argv.slice(2);
