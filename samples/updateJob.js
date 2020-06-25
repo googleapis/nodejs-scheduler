@@ -35,10 +35,10 @@ async function updateJob(projectId, locationId, jobId) {
   const request = {
     job: {
       name: job,
-      description: 'Hello World example.'
+      description: 'Hello World example.',
     },
     updateMask: {
-      paths: ['description']
+      paths: ['description'],
     },
   };
 
