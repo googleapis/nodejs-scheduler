@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/nodejs-scheduler.git",
-        "sha": "7fccee09062314b0b4d3dab1c8e694a5fb9085f7"
+        "sha": "a970e425bc38e3e319b0f5362bd47b52e28d557d"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "839fae42335ee1bb1e70767f3e6c51738683892b",
-        "internalRef": "310213770"
+        "sha": "4c5071b615d96ef9dfd6a63d8429090f1f2872bb",
+        "internalRef": "327369997"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "b10590a4a1568548dd13cfcea9aa11d40898144b"
+        "sha": "8cf6d2834ad14318e64429c3b94f6443ae83daf9"
       }
     }
   ],
@@ -29,8 +29,8 @@
         "source": "googleapis",
         "apiName": "scheduler",
         "apiVersion": "v1",
-        "language": "typescript",
-        "generator": "gapic-generator-typescript"
+        "language": "nodejs",
+        "generator": "bazel"
       }
     },
     {
@@ -38,9 +38,88 @@
         "source": "googleapis",
         "apiName": "scheduler",
         "apiVersion": "v1beta1",
-        "language": "typescript",
-        "generator": "gapic-generator-typescript"
+        "language": "nodejs",
+        "generator": "bazel"
       }
     }
+  ],
+  "generatedFiles": [
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitattributes",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/ISSUE_TEMPLATE/support_request.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/release-please.yml",
+    ".github/workflows/ci.yaml",
+    ".gitignore",
+    ".jsdoc.js",
+    ".kokoro/.gitattributes",
+    ".kokoro/common.cfg",
+    ".kokoro/continuous/node10/common.cfg",
+    ".kokoro/continuous/node10/docs.cfg",
+    ".kokoro/continuous/node10/test.cfg",
+    ".kokoro/continuous/node12/common.cfg",
+    ".kokoro/continuous/node12/lint.cfg",
+    ".kokoro/continuous/node12/samples-test.cfg",
+    ".kokoro/continuous/node12/system-test.cfg",
+    ".kokoro/continuous/node12/test.cfg",
+    ".kokoro/docs.sh",
+    ".kokoro/lint.sh",
+    ".kokoro/populate-secrets.sh",
+    ".kokoro/presubmit/node10/common.cfg",
+    ".kokoro/presubmit/node12/common.cfg",
+    ".kokoro/presubmit/node12/samples-test.cfg",
+    ".kokoro/presubmit/node12/system-test.cfg",
+    ".kokoro/presubmit/node12/test.cfg",
+    ".kokoro/publish.sh",
+    ".kokoro/release/docs-devsite.cfg",
+    ".kokoro/release/docs-devsite.sh",
+    ".kokoro/release/docs.cfg",
+    ".kokoro/release/docs.sh",
+    ".kokoro/release/publish.cfg",
+    ".kokoro/samples-test.sh",
+    ".kokoro/system-test.sh",
+    ".kokoro/test.bat",
+    ".kokoro/test.sh",
+    ".kokoro/trampoline.sh",
+    ".mocharc.js",
+    ".nycrc",
+    ".prettierignore",
+    ".prettierrc.js",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "api-extractor.json",
+    "linkinator.config.json",
+    "protos/google/cloud/scheduler/v1/cloudscheduler.proto",
+    "protos/google/cloud/scheduler/v1/job.proto",
+    "protos/google/cloud/scheduler/v1/target.proto",
+    "protos/google/cloud/scheduler/v1beta1/cloudscheduler.proto",
+    "protos/google/cloud/scheduler/v1beta1/job.proto",
+    "protos/google/cloud/scheduler/v1beta1/target.proto",
+    "protos/protos.d.ts",
+    "protos/protos.js",
+    "protos/protos.json",
+    "renovate.json",
+    "samples/README.md",
+    "src/index.ts",
+    "src/v1/cloud_scheduler_client.ts",
+    "src/v1/cloud_scheduler_client_config.json",
+    "src/v1/cloud_scheduler_proto_list.json",
+    "src/v1/index.ts",
+    "src/v1beta1/cloud_scheduler_client.ts",
+    "src/v1beta1/cloud_scheduler_client_config.json",
+    "src/v1beta1/cloud_scheduler_proto_list.json",
+    "src/v1beta1/index.ts",
+    "system-test/fixtures/sample/src/index.js",
+    "system-test/fixtures/sample/src/index.ts",
+    "system-test/install.ts",
+    "test/gapic_cloud_scheduler_v1.ts",
+    "test/gapic_cloud_scheduler_v1beta1.ts",
+    "tsconfig.json",
+    "webpack.config.js"
   ]
 }
