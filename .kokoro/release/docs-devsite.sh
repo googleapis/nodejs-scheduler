@@ -40,6 +40,8 @@ cp ./yaml/$NAME/* ./_devsite
 # Delete SharePoint item, see https://github.com/microsoft/rushstack/issues/1229
 sed -i -e '1,3d' ./yaml/toc.yml
 sed -i -e 's/^    //' ./yaml/toc.yml
+# Delete interfaces from TOC
+sed -i -e 'name: /I[A-Z]/,+1d' ./yaml/toc.yml
 
 cp ./yaml/toc.yml ./_devsite/toc.yml
 

@@ -1,0 +1,323 @@
+items:
+  - name: SharePoint Framework reference
+    href: ~/overview/sharepoint.md
+    items:
+      - name: scheduler
+        uid: '@google-cloud/scheduler!'
+        items:
+          - name: CustomHttpPattern
+            uid: '@google-cloud/scheduler!google.api.CustomHttpPattern:class'
+          - name: FieldBehavior
+            uid: '@google-cloud/scheduler!google.api.FieldBehavior:enum'
+          - name: Http
+            uid: '@google-cloud/scheduler!google.api.Http:class'
+          - name: HttpRule
+            uid: '@google-cloud/scheduler!google.api.HttpRule:class'
+          - name: ICustomHttpPattern
+            uid: '@google-cloud/scheduler!google.api.ICustomHttpPattern:interface'
+          - name: IHttp
+            uid: '@google-cloud/scheduler!google.api.IHttp:interface'
+          - name: IHttpRule
+            uid: '@google-cloud/scheduler!google.api.IHttpRule:interface'
+          - name: IResourceDescriptor
+            uid: '@google-cloud/scheduler!google.api.IResourceDescriptor:interface'
+          - name: IResourceReference
+            uid: '@google-cloud/scheduler!google.api.IResourceReference:interface'
+          - name: ResourceDescriptor (Class)
+            uid: '@google-cloud/scheduler!google.api.ResourceDescriptor:class'
+          - name: History
+            uid: '@google-cloud/scheduler!google.api.ResourceDescriptor.History:enum'
+          - name: ResourceReference
+            uid: '@google-cloud/scheduler!google.api.ResourceReference:class'
+          - name: AppEngineHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.AppEngineHttpTarget:class'
+          - name: AppEngineRouting
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.AppEngineRouting:class'
+          - name: CloudScheduler (Class)
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.CloudScheduler:class'
+          - name: CreateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.CreateJobRequest:class'
+          - name: DeleteJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.DeleteJobRequest:class'
+          - name: GetJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.GetJobRequest:class'
+          - name: HttpMethod
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.HttpMethod:enum'
+          - name: HttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.HttpTarget:class'
+          - name: IAppEngineHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IAppEngineHttpTarget:interface'
+          - name: IAppEngineRouting
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IAppEngineRouting:interface'
+          - name: ICreateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.ICreateJobRequest:interface'
+          - name: IDeleteJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IDeleteJobRequest:interface'
+          - name: IGetJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IGetJobRequest:interface'
+          - name: IHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IHttpTarget:interface'
+          - name: IJob
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IJob:interface'
+          - name: IListJobsRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IListJobsRequest:interface'
+          - name: IListJobsResponse
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IListJobsResponse:interface'
+          - name: IOAuthToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IOAuthToken:interface'
+          - name: IOidcToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IOidcToken:interface'
+          - name: IPauseJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IPauseJobRequest:interface'
+          - name: IPubsubTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IPubsubTarget:interface'
+          - name: IResumeJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IResumeJobRequest:interface'
+          - name: IRetryConfig
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IRetryConfig:interface'
+          - name: IRunJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IRunJobRequest:interface'
+          - name: IUpdateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.IUpdateJobRequest:interface'
+          - name: Job (Class)
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.Job:class'
+          - name: State
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.Job.State:enum'
+          - name: ListJobsRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.ListJobsRequest:class'
+          - name: ListJobsResponse
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.ListJobsResponse:class'
+          - name: OAuthToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.OAuthToken:class'
+          - name: OidcToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.OidcToken:class'
+          - name: PauseJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.PauseJobRequest:class'
+          - name: PubsubTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.PubsubTarget:class'
+          - name: ResumeJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.ResumeJobRequest:class'
+          - name: RetryConfig
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.RetryConfig:class'
+          - name: RunJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.RunJobRequest:class'
+          - name: UpdateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1.UpdateJobRequest:class'
+          - name: AppEngineHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.AppEngineHttpTarget:class'
+          - name: AppEngineRouting
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.AppEngineRouting:class'
+          - name: CloudScheduler (Class)
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.CloudScheduler:class'
+          - name: CreateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.CreateJobRequest:class'
+          - name: DeleteJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.DeleteJobRequest:class'
+          - name: GetJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.GetJobRequest:class'
+          - name: HttpMethod
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.HttpMethod:enum'
+          - name: HttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.HttpTarget:class'
+          - name: IAppEngineHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IAppEngineHttpTarget:interface'
+          - name: IAppEngineRouting
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IAppEngineRouting:interface'
+          - name: ICreateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.ICreateJobRequest:interface'
+          - name: IDeleteJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IDeleteJobRequest:interface'
+          - name: IGetJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IGetJobRequest:interface'
+          - name: IHttpTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IHttpTarget:interface'
+          - name: IJob
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IJob:interface'
+          - name: IListJobsRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IListJobsRequest:interface'
+          - name: IListJobsResponse
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IListJobsResponse:interface'
+          - name: IOAuthToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IOAuthToken:interface'
+          - name: IOidcToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IOidcToken:interface'
+          - name: IPauseJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IPauseJobRequest:interface'
+          - name: IPubsubTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IPubsubTarget:interface'
+          - name: IResumeJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IResumeJobRequest:interface'
+          - name: IRetryConfig
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IRetryConfig:interface'
+          - name: IRunJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IRunJobRequest:interface'
+          - name: IUpdateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.IUpdateJobRequest:interface'
+          - name: Job (Class)
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.Job:class'
+          - name: State
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.Job.State:enum'
+          - name: ListJobsRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.ListJobsRequest:class'
+          - name: ListJobsResponse
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.ListJobsResponse:class'
+          - name: OAuthToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.OAuthToken:class'
+          - name: OidcToken
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.OidcToken:class'
+          - name: PauseJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.PauseJobRequest:class'
+          - name: PubsubTarget
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.PubsubTarget:class'
+          - name: ResumeJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.ResumeJobRequest:class'
+          - name: RetryConfig
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.RetryConfig:class'
+          - name: RunJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.RunJobRequest:class'
+          - name: UpdateJobRequest
+            uid: '@google-cloud/scheduler!google.cloud.scheduler.v1beta1.UpdateJobRequest:class'
+          - name: Any
+            uid: '@google-cloud/scheduler!google.protobuf.Any:class'
+          - name: DescriptorProto (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.DescriptorProto:class'
+          - name: ExtensionRange
+            uid: '@google-cloud/scheduler!google.protobuf.DescriptorProto.ExtensionRange:class'
+          - name: IExtensionRange
+            uid: '@google-cloud/scheduler!google.protobuf.DescriptorProto.IExtensionRange:interface'
+          - name: IReservedRange
+            uid: '@google-cloud/scheduler!google.protobuf.DescriptorProto.IReservedRange:interface'
+          - name: ReservedRange
+            uid: '@google-cloud/scheduler!google.protobuf.DescriptorProto.ReservedRange:class'
+          - name: Duration
+            uid: '@google-cloud/scheduler!google.protobuf.Duration:class'
+          - name: Empty
+            uid: '@google-cloud/scheduler!google.protobuf.Empty:class'
+          - name: EnumDescriptorProto (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.EnumDescriptorProto:class'
+          - name: EnumReservedRange
+            uid: '@google-cloud/scheduler!google.protobuf.EnumDescriptorProto.EnumReservedRange:class'
+          - name: IEnumReservedRange
+            uid: '@google-cloud/scheduler!google.protobuf.EnumDescriptorProto.IEnumReservedRange:interface'
+          - name: EnumOptions
+            uid: '@google-cloud/scheduler!google.protobuf.EnumOptions:class'
+          - name: EnumValueDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.EnumValueDescriptorProto:class'
+          - name: EnumValueOptions
+            uid: '@google-cloud/scheduler!google.protobuf.EnumValueOptions:class'
+          - name: ExtensionRangeOptions
+            uid: '@google-cloud/scheduler!google.protobuf.ExtensionRangeOptions:class'
+          - name: FieldDescriptorProto (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.FieldDescriptorProto:class'
+          - name: Label
+            uid: '@google-cloud/scheduler!google.protobuf.FieldDescriptorProto.Label:enum'
+          - name: Type
+            uid: '@google-cloud/scheduler!google.protobuf.FieldDescriptorProto.Type:enum'
+          - name: FieldMask
+            uid: '@google-cloud/scheduler!google.protobuf.FieldMask:class'
+          - name: FieldOptions (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.FieldOptions:class'
+          - name: CType
+            uid: '@google-cloud/scheduler!google.protobuf.FieldOptions.CType:enum'
+          - name: JSType
+            uid: '@google-cloud/scheduler!google.protobuf.FieldOptions.JSType:enum'
+          - name: FileDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.FileDescriptorProto:class'
+          - name: FileDescriptorSet
+            uid: '@google-cloud/scheduler!google.protobuf.FileDescriptorSet:class'
+          - name: FileOptions (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.FileOptions:class'
+          - name: OptimizeMode
+            uid: '@google-cloud/scheduler!google.protobuf.FileOptions.OptimizeMode:enum'
+          - name: GeneratedCodeInfo (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.GeneratedCodeInfo:class'
+          - name: Annotation
+            uid: '@google-cloud/scheduler!google.protobuf.GeneratedCodeInfo.Annotation:class'
+          - name: IAnnotation
+            uid: '@google-cloud/scheduler!google.protobuf.GeneratedCodeInfo.IAnnotation:interface'
+          - name: IAny
+            uid: '@google-cloud/scheduler!google.protobuf.IAny:interface'
+          - name: IDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IDescriptorProto:interface'
+          - name: IDuration
+            uid: '@google-cloud/scheduler!google.protobuf.IDuration:interface'
+          - name: IEmpty
+            uid: '@google-cloud/scheduler!google.protobuf.IEmpty:interface'
+          - name: IEnumDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IEnumDescriptorProto:interface'
+          - name: IEnumOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IEnumOptions:interface'
+          - name: IEnumValueDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IEnumValueDescriptorProto:interface'
+          - name: IEnumValueOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IEnumValueOptions:interface'
+          - name: IExtensionRangeOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IExtensionRangeOptions:interface'
+          - name: IFieldDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IFieldDescriptorProto:interface'
+          - name: IFieldMask
+            uid: '@google-cloud/scheduler!google.protobuf.IFieldMask:interface'
+          - name: IFieldOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IFieldOptions:interface'
+          - name: IFileDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IFileDescriptorProto:interface'
+          - name: IFileDescriptorSet
+            uid: '@google-cloud/scheduler!google.protobuf.IFileDescriptorSet:interface'
+          - name: IFileOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IFileOptions:interface'
+          - name: IGeneratedCodeInfo
+            uid: '@google-cloud/scheduler!google.protobuf.IGeneratedCodeInfo:interface'
+          - name: IMessageOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IMessageOptions:interface'
+          - name: IMethodDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IMethodDescriptorProto:interface'
+          - name: IMethodOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IMethodOptions:interface'
+          - name: IOneofDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IOneofDescriptorProto:interface'
+          - name: IOneofOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IOneofOptions:interface'
+          - name: IServiceDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.IServiceDescriptorProto:interface'
+          - name: IServiceOptions
+            uid: '@google-cloud/scheduler!google.protobuf.IServiceOptions:interface'
+          - name: ISourceCodeInfo
+            uid: '@google-cloud/scheduler!google.protobuf.ISourceCodeInfo:interface'
+          - name: ITimestamp
+            uid: '@google-cloud/scheduler!google.protobuf.ITimestamp:interface'
+          - name: IUninterpretedOption
+            uid: '@google-cloud/scheduler!google.protobuf.IUninterpretedOption:interface'
+          - name: MessageOptions
+            uid: '@google-cloud/scheduler!google.protobuf.MessageOptions:class'
+          - name: MethodDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.MethodDescriptorProto:class'
+          - name: MethodOptions (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.MethodOptions:class'
+          - name: IdempotencyLevel
+            uid: '@google-cloud/scheduler!google.protobuf.MethodOptions.IdempotencyLevel:enum'
+          - name: OneofDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.OneofDescriptorProto:class'
+          - name: OneofOptions
+            uid: '@google-cloud/scheduler!google.protobuf.OneofOptions:class'
+          - name: ServiceDescriptorProto
+            uid: '@google-cloud/scheduler!google.protobuf.ServiceDescriptorProto:class'
+          - name: ServiceOptions
+            uid: '@google-cloud/scheduler!google.protobuf.ServiceOptions:class'
+          - name: SourceCodeInfo (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.SourceCodeInfo:class'
+          - name: ILocation
+            uid: '@google-cloud/scheduler!google.protobuf.SourceCodeInfo.ILocation:interface'
+          - name: Location
+            uid: '@google-cloud/scheduler!google.protobuf.SourceCodeInfo.Location:class'
+          - name: Timestamp
+            uid: '@google-cloud/scheduler!google.protobuf.Timestamp:class'
+          - name: UninterpretedOption (Class)
+            uid: '@google-cloud/scheduler!google.protobuf.UninterpretedOption:class'
+          - name: INamePart
+            uid: '@google-cloud/scheduler!google.protobuf.UninterpretedOption.INamePart:interface'
+          - name: NamePart
+            uid: '@google-cloud/scheduler!google.protobuf.UninterpretedOption.NamePart:class'
+          - name: IStatus
+            uid: '@google-cloud/scheduler!google.rpc.IStatus:interface'
+          - name: Status
+            uid: '@google-cloud/scheduler!google.rpc.Status:class'
