@@ -3,8 +3,16 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/nodejs-scheduler.git",
-        "sha": "55217ba4a8de447875a55e2d7b94a910f5773871"
+        "remote": "https://github.com/googleapis/nodejs-scheduler.git",
+        "sha": "7f8b30c165d3de8beebb0e6704535b4eed7d817d"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "2f019bf70bfe06f1e2af1b04011b0a2405190e43",
+        "internalRef": "343202295"
       }
     },
     {
@@ -88,7 +96,6 @@
     "README.md",
     "api-extractor.json",
     "linkinator.config.json",
-    "package-lock.json.1975481685",
     "protos/google/cloud/scheduler/v1/cloudscheduler.proto",
     "protos/google/cloud/scheduler/v1/job.proto",
     "protos/google/cloud/scheduler/v1/target.proto",
@@ -100,7 +107,6 @@
     "protos/protos.json",
     "renovate.json",
     "samples/README.md",
-    "samples/package-lock.json.3211560438",
     "src/index.ts",
     "src/v1/cloud_scheduler_client.ts",
     "src/v1/cloud_scheduler_client_config.json",
