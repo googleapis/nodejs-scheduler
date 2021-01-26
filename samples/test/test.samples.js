@@ -50,6 +50,7 @@ describe('Cloud Scheduler Sample Tests', () => {
       `node deleteJob.js ${PROJECT_ID} ${LOCATION_ID} ${jobName}`
     );
     assert.match(stdout, /Job deleted/);
+    assert.strictEqual(true, false);
   });
 });
 
