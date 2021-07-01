@@ -1,0 +1,7 @@
+steps:
+- name: node:14
+  entrypoint: npm
+  args: ['install', '--unsafe-perm']
+- name: node:14
+  entrypoint: npm
+  args: ['run', 'system-test']
